@@ -26,7 +26,10 @@ std::int32_t GameController::RunApplication()
             {
                 str_filename = std::string(DATA_PATH) + "/input.txt";
             }
-            str_filename = std::string(DATA_PATH) + "/" + str_input_filename;
+            else
+            {
+                str_filename = std::string(DATA_PATH) + "/" + str_input_filename;   
+            }
             PlayGameFromFile(str_filename);
         }
         else if (choice == 2)
@@ -37,7 +40,10 @@ std::int32_t GameController::RunApplication()
             {
                 str_filename = std::string(DATA_PATH) + "/multiple_games.txt";
             }
-            str_filename = std::string(DATA_PATH) + "/" + str_input_filename;
+            else
+            {
+                str_filename = std::string(DATA_PATH) + "/" + str_input_filename;
+            }
             PlayMultipleGamesFromFile(str_filename);
         }
         else if (choice == 3)
